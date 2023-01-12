@@ -1,10 +1,16 @@
-import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Footer from './components/Layouts/Footer';
+import Navbar from './components/Layouts/Navbar';
 
 function App() {
   return (
-    <div className='bg-purple-500'>
-      <h1 className='text-xl'>Hello world!</h1>
-    </div>
+    <Router>
+      <div className='flex flex-col justify-between h-screen'>
+        <Navbar />
+        <main className='container mx-auto px-3 pb-12'>Content</main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
